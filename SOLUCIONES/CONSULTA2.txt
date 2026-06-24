@@ -1,0 +1,8 @@
+SELECT
+  a.Title,
+  COUNT(*) AS TrackCount
+FROM album AS a
+JOIN track AS t
+  ON t.AlbumId = a.AlbumId
+GROUP BY
+  a.Title;
